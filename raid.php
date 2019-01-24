@@ -1,7 +1,7 @@
 <?php
-$dbhost = "hostname/ip";
-$dbuser = "rdmuser";
-$dbpass = "password";
+$dbhost = "";
+$dbuser = "";
+$dbpass = "";
 $dbname = "rdmdb";
 
 // Establish connection to database
