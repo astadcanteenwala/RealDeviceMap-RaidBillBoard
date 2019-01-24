@@ -100,9 +100,7 @@ table th {
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <?php>
-$dbhost = "";
-$dbuser = "";
-$dbpass = "";
+
 $dbname = "rdmdb";
 // Establish connection to database
 try{
@@ -120,7 +118,7 @@ try
         $google_url = "http://maps.google.com/?q=";
         $result = $pdo->query($sql);
         if($result->rowCount() > 0){
-            echo "<table>";
+            echo "<table id = 'myTable'>";
             echo "<caption> Halifax Quests </caption>";
                 echo "<tr>";
                     echo "<th>Pokemon</th>";
@@ -131,7 +129,7 @@ try
                 echo "<tr class='header'>";
                     echo "<td>" . $row[0] . "</td>";
                     echo "<td>" . $row[1] . "</td>";
-                    echo "<td><a href='$google_url $row[2].",",$row[3].'>Link</a></td>"; 
+                    echo "<td><a href='$google_url $row[2]",",$row[3]'>Link</a></td>"; 
                 echo "</tr>";
             }
             echo "</table>";
